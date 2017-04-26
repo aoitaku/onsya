@@ -101,9 +101,9 @@ CV$
   / D e { return 'ゼ' }
   / D o { return 'ゾ' }
   / d a { return 'ダ' }
+  / d u { return 'ドゥ' }
   / d e { return 'デ' }
   / d o { return 'ド' }
-  / d v:_w { return 'ド'　+ v }
   / d v:_w { return 'デ'　+ v }
   / z a { return 'ザ' }
   / z u { return 'ズ' }
@@ -116,6 +116,11 @@ CV$
   / Z v:_y { return 'ジ' + v }
   / J i { return 'ギ' }
   / J v:_y { return 'ギ' + v }
+  / g a { return 'ガ' }
+  / g i { return 'ギ' }
+  / g u { return 'グ' }
+  / g e { return 'ゲ' }
+  / g o { return 'ゴ' }
   / r a { return 'ラ' }
   / r i { return 'リ' }
   / r u { return 'ル' }
