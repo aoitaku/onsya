@@ -10,7 +10,8 @@
   ],
   "private": true,
   "author": "Taku Aoi<aoitaku@gmail.com>",
-  "main": "src/onsya.js",
+  "main": "./src/onsya.js",
+  "types": "./src/onsya.d.ts",
   "repository": {
     "type" : "git"
   , "url" : "http://github.com/aoitaku/onsya.git"
