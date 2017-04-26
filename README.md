@@ -1,2 +1,2 @@
 # pha2kana
-artlang phonetic alphabet to kana translater for JavaScript
+Phonetic alphabet transcription to kana transform for JavaScript.

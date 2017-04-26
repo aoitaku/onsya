@@ -1,0 +1,254 @@
+start
+  = (CjV$ / CV$ / V$ / R$ / Q$ / N$ / C$)*
+
+R$
+  = _ { return 'ー' }
+
+V$
+  = a { return 'ア' }
+  / i { return 'イ' }
+  / u { return 'ウ' }
+  / e { return 'エ' }
+  / o { return 'オ' }
+
+_w
+  = a { return 'ァ' }
+  / i { return 'ィ' }
+  / u { return 'ゥ' }
+  / e { return 'ェ' }
+  / o { return 'ォ' }
+
+_y
+  = a { return 'ャ' }
+  / i { return 'ィ' }
+  / u { return 'ュ' }
+  / e { return 'ェ' }
+  / o { return 'ョ' }
+
+CjV$
+  = p y i { return  'ピ' }
+  / p y v:_y { return  'ピ' + v }
+  / f y e { return  'フィエ' }
+  / f y v:_y { return  'フ' + v }
+  / t y i {　return 'ティ' }
+  / t y u {　return 'テュ' }
+  / t y e {　return 'ティエ' }
+  / t v:Y {　return 'ティ' + v }
+  / b y i { return  'ビ' }
+  / b y v:_y { return  'ビ' + v }
+  / v y e { return  'ヴィエ' }
+  / v y v:_y { return  'ヴ' + v }
+  / d y i {　return 'ディ' }
+  / d y u {　return 'デュ' }
+  / d y e {　return 'ディエ' }
+  / d v:Y {　return 'ディ' + v }
+  / r y i { return 'リ' }
+  / r y v:_y { return 'リ' + v }
+  / m y i { return  'ミ' }
+  / m y v:_y { return  'ミ' + v }
+
+CV$
+  = p a { return 'パ' }
+  / p i { return 'ピ' }
+  / p u { return 'プ' }
+  / p e { return 'ペ' }
+  / p o { return 'ポ' }
+  / f u { return 'フ' }
+  / f v:_w { return 'フ' + v }
+  / T a { return 'サ' }
+  / T i { return 'シ' }
+  / T u { return 'ス' }
+  / T e { return 'セ' }
+  / T o { return 'ソ' }
+  / t a { return 'タ' }
+  / t e { return 'テ' }
+  / t o { return 'ト' }
+  / t (&u) v:_w { return 'ト' + v }
+  / t v:_w { return 'テ' + v }
+  / ts u  { return 'ツ' }
+  / ts v:_w { return 'ツ' + v }
+  / s a { return 'サ' }
+  / s u { return 'ス' }
+  / s e { return 'セ' }
+  / s o { return 'ソ' }
+  / s v:_w { return 'ス' + v }
+  / tS i { return 'チ' }
+  / tS v:_y { return 'チ' + v }
+  / S i { return 'シ' }
+  / S v:_y { return 'シ' + v }
+  / C i { return 'ヒ' }
+  / C v:_y { return 'ヒ' + v }
+  / c i { return 'キ' }
+  / c v:_y { return 'キ' + v }
+  / k a { return 'カ' }
+  / k i { return 'キ' }
+  / k u { return 'ク' }
+  / k e { return 'ケ' }
+  / k o { return 'コ' }
+  / h a { return 'ハ' }
+  / h i { return 'ヒ' }
+  / h u { return 'フ' }
+  / h e { return 'ヘ' }
+  / h o { return 'ホ' }
+  / b a { return 'バ' }
+  / b i { return 'ビ' }
+  / b u { return 'ブ' }
+  / b e { return 'ベ' }
+  / b o { return 'ボ' }
+  / D a { return 'ザ' }
+  / D i { return 'ジ' }
+  / D u { return 'ズ' }
+  / D e { return 'ゼ' }
+  / D o { return 'ゾ' }
+  / d a { return 'ダ' }
+  / d e { return 'デ' }
+  / d o { return 'ド' }
+  / d v:_w { return 'ド'　+ v }
+  / d v:_w { return 'デ'　+ v }
+  / z a { return 'ザ' }
+  / z u { return 'ズ' }
+  / z e { return 'ゼ' }
+  / z o { return 'ゾ' }
+  / z v:_w { return 'ズ'　+ v }
+  / v u { return 'ヴ' }
+  / v v:_w { return 'ヴ' + v }
+  / Z i { return 'ジ' }
+  / Z v:_y { return 'ジ' + v }
+  / J i { return 'ギ' }
+  / J v:_y { return 'ギ' + v }
+  / r a { return 'ラ' }
+  / r i { return 'リ' }
+  / r u { return 'ル' }
+  / r e { return 'レ' }
+  / r o { return 'ロ' }
+  / m a { return 'マ' }
+  / m i { return 'ミ' }
+  / m u { return 'ム' }
+  / m e { return 'メ' }
+  / m o { return 'モ' }
+  / n a { return 'ナ' }
+  / n i { return 'ニ' }
+  / n u { return 'ヌ' }
+  / n e { return 'ネ' }
+  / n o { return 'ノ' }
+  / j i { return 'ニ' }
+  / j v:_y { return 'ニ' + v }
+  / W
+  / Y
+
+W
+  = w a { return 'ワ' }
+  / w u { return 'ウ' }
+  / w v:_w { return 'ウ' + v }
+
+Y
+  = y a { return 'ヤ' }
+  / y i { return 'イ' }
+  / y u { return 'ユ' }
+  / y o { return 'ヨ' }
+  / y v:_y { return 'イ' + v }
+
+Q$
+  = ( p &p
+    / f &f
+    / T &T
+    / t &t
+    / s &s
+    / S &S
+    / t &ts
+    / t &tS
+    / k &k
+    / k &c
+    / b &b
+    / v &v
+    / D &D
+    / d &d
+    / Z &Z
+    / z &z
+    / g &g
+    / g &J
+    / y &y
+    / w &w) { return 'ッ' }
+
+N$
+ = m &(p / b / m) { return 'ン' }
+ / n !(y) { return 'ン' }
+
+C$
+ = p &y { return 'ピ' }
+ / p { return 'プ' }
+ / f { return 'フ' }
+ / T &y { return 'シ' }
+ / T { return 'ス' }
+ / t &w { return 'ト' }
+ / t &y { return 'テ' }
+ / t &(CjV$ / CV$ / C$) { return 'トゥ' }
+ / t { return 'ト' }
+ / ts { return 'ツ' }
+ / s { return 'ス' }
+ / tS &y { return 'チ' }
+ / tS &(CjV$ / CV$ / C$) { return 'チュ' }
+ / tS { return 'チ' }
+ / S &y { return 'シ' }
+ / S { return 'シュ' }
+ / C { return 'ヒ' }
+ / c { return 'キ' }
+ / k &y { return 'キ' }
+ / k { return 'ク' }
+ / h &y { return 'ヒ' }
+ / h { return 'ホ' }
+ / b &y { return 'ビ' }
+ / b { return 'ブ' }
+ / v { return 'ヴ' }
+ / D &y { return 'ジ' }
+ / D { return 'ズ' }
+ / d &(CjV$ / CV$ / C$) { return 'ドゥ' }
+ / d { return 'ド' }
+ / Z &y { return 'ジ' }
+ / Z &(CjV$ / CV$ / C$) { return 'ジュ' }
+ / Z { return 'ジ' }
+ / z { return 'ズ' }
+ / g { return 'グ' }
+ / g &y { return 'ギ' }
+ / J { return 'ギ' }
+ / r &y { return 'リ' }
+ / r { return 'ル' }
+ / m &y { return 'ミ' }
+ / m { return 'ム' }
+ / n &y { return 'ニ' }
+ / j { return 'ニ' }
+ / w { return 'ゥ' }
+ / y { return 'ィ' }
+
+p  = 'p'
+f = 'f'
+T = 'θ'
+t = 't'
+ts = 'ʦ'
+s = 's'
+tS = 'ʧ'
+S = 'ʃ'
+C = 'ç'
+c = 'c'
+k = 'k'
+h = 'h'
+b = 'b'
+v = 'v'
+D = 'ð'
+Z = 'ʒ'
+d = 'd'
+z = 'z'
+J = 'ɟ'
+g = 'g'
+r = 'r'
+m = 'm'
+n = 'n'
+j = 'ɲ'
+w = 'w'
+y = 'j'
+a = 'a'
+i = 'i'
+u = 'u'
+e = 'e'
+o = 'o'
+_ = 'ː'
