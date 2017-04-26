@@ -2,9 +2,15 @@
   "name": "onsya",
   "description": "phonetic transcription to kana transform",
   "version": "0.9.0",
-  "license": "zlib",
+  "licenses": [
+    {
+      "type": "zlib",
+      "url": "https://opensource.org/licenses/Zlib"
+    }
+  ],
   "private": true,
   "author": "Taku Aoi<aoitaku@gmail.com>",
+  "main": "src/onsya.js",
   "repository": {
     "type" : "git"
   , "url" : "http://github.com/aoitaku/onsya.git"
