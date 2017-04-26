@@ -9,6 +9,9 @@
     "type" : "git"
   , "url" : "http://github.com/aoitaku/onsya.git"
   },
+  "scripts": {
+    "build" : "pegjs -o src/onsya.js grammar/onsya.peg-grammar"
+  },
   "devDependencies": {
     "pegjs": "^0.10.0"
   }
