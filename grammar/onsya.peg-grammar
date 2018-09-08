@@ -1,5 +1,7 @@
 start
-  = (CjV$ / CV$ / V$ / R$ / Q$ / N$ / C$)*
+  = (VQ$ / CjV$ / CV$ / V$ / R$ / N$ / C$)*
+
+VQ$ = v:(CjV$ / CV$ / V$) q:Q$ { return v + q }
 
 R$
   = _ { return 'ー' }

@@ -1,7 +1,7 @@
 {
   "name": "onsya",
   "description": "phonetic transcription to kana transform",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "licenses": [
     {
       "type": "zlib",
@@ -13,11 +13,11 @@
   "main": "./src/onsya.js",
   "types": "./src/onsya.d.ts",
   "repository": {
-    "type" : "git"
-  , "url" : "http://github.com/aoitaku/onsya.git"
+    "type": "git",
+    "url": "http://github.com/aoitaku/onsya.git"
   },
   "scripts": {
-    "build" : "pegjs -o src/onsya.js grammar/onsya.peg-grammar"
+    "build": "pegjs -o src/onsya.js grammar/onsya.peg-grammar"
   },
   "devDependencies": {
     "pegjs": "^0.10.0"
