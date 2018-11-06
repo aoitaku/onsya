@@ -138,6 +138,11 @@ CV$
   / n u { return 'ヌ' }
   / n e { return 'ネ' }
   / n o { return 'ノ' }
+  / N a { return 'ンガ' }
+  / N i { return 'ンギ' }
+  / N u { return 'ング' }
+  / N e { return 'ンゲ' }
+  / N o { return 'ンゴ' }
   / J i { return 'ニ' }
   / J v:_j$ { return 'ニ' + v }
   / wV$
@@ -223,6 +228,8 @@ C$
  / m &j { return 'ミ' }
  / m { return 'ム' }
  / n &j { return 'ニ' }
+ / N &(k / g) { return 'ン' }
+ / N !(k / g) { return 'ング' }
  / J { return 'ニ' }
  / w { return 'ゥ' }
  / j { return 'ィ' }
@@ -231,9 +238,9 @@ p  = 'p'
 f = 'f'
 T = 'θ'
 t = 't'
-ts = 'ʦ'
+ts = 'ʦ' / 't͡s'
 s = 's'
-tS = 'ʧ'
+tS = 'ʧ' / 't͡ʃ'
 S = 'ʃ'
 C = 'ç'
 c = 'c'
@@ -250,10 +257,11 @@ g = 'g'
 r = 'r' / 'ɾ'
 m = 'm'
 n = 'n'
+N = 'ŋ'
 J = 'ɲ'
 w = 'w'
 j = 'j'
-a = 'a' 
+a = 'a'
 A = 'ɑ'
 i = 'i'
 I = 'ɪ'
